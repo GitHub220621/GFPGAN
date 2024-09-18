@@ -108,7 +108,7 @@ class GFPGANer():
         else:
             self.face_helper.read_image(img)
             # get face landmarks for each face
-            self.face_helper.get_face_landmarks_5(only_keep_largest=only_keep_largest, eye_dist_threshold=5)
+            self.face_helper.get_face_landmarks_5(only_keep_largest=only_keep_largest, resize=840, eye_dist_threshold=5)
             # eye_dist_threshold=5: skip faces whose eye distance is smaller than 5 pixels
             # TODO: even with eye_dist_threshold, it will still introduce wrong detections and restorations.
             # align and warp each face
